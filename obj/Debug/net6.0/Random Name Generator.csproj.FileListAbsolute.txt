@@ -1,0 +1,46 @@
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\appsettings.Development.json
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\appsettings.json
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Random Name Generator.exe
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Random Name Generator.deps.json
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Random Name Generator.runtimeconfig.json
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Random Name Generator.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\ref\Random Name Generator.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Random Name Generator.pdb
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.csproj.AssemblyReference.cache
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.GeneratedMSBuildEditorConfig.editorconfig
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.AssemblyInfoInputs.cache
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.AssemblyInfo.cs
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.csproj.CoreCompileInputs.cache
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.MvcApplicationPartsAssemblyInfo.cache
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\staticwebassets.build.json
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\staticwebassets.development.json
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\scopedcss\bundle\Random Name Generator.styles.css
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.csproj.CopyComplete
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.dll
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\ref\Random Name Generator.dll
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.pdb
+G:\Development\C#\Random Name Generator\obj\Debug\net6.0\Random Name Generator.genruntimeconfig.cache
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Api.CommonProtos.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Api.Gax.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Api.Gax.Grpc.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Api.Gax.Grpc.GrpcCore.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Apis.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Apis.Auth.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Apis.Core.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Cloud.Iam.V1.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Cloud.SecretManager.V1.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Google.Protobuf.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Grpc.Auth.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Grpc.Core.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Grpc.Core.Api.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\DSharpPlus.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\Emzi0767.Common.dll
+G:\Development\C#\Random Name Generator\bin\Debug\net6.0\DSharpPlus.CommandsNext.dll
