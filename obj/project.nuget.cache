@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z6HqfkT/Kqc9kJYHPwKQZBplaeruxZjaP6lxH7qlENN2CrbAWjy8EYWvD1ioHtCBA8RmEZqzE8EdLNOpGEASyw==",
+  "dgSpecHash": "fxdGU1Evd6Z/5jLHAgp2ocWO0VmWIC74QdMd25NIRnuKCySjL72NU1ndw5iDL0VdZbRC4MwN4zpRYXFDzlzNtg==",
   "success": true,
   "projectFilePath": "G:\\Development\\C#\\Random Team Generator\\Random Team Generator.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\ieuan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ieuan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\ieuan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\ieuan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\ieuan\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ieuan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ieuan\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

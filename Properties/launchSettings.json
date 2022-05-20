@@ -17,7 +17,6 @@
         "projectId": "random-team-generator-league",
         "secretId": "Discord_Bot_Token",
         "secretVersionId": "1"
-
       },
       "applicationUrl": "https://localhost:7231;http://localhost:5231",
       "dotnetRunMessages": true
@@ -28,6 +27,13 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }
