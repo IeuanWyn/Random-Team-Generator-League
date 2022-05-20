@@ -1,6 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using Enums;
+using log4net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Services;
@@ -13,8 +14,8 @@ namespace Commands
     {
         readonly HttpHelperService _httpHelperService = new HttpHelperService();
 
-        private ILogger _logger;
-        public TeamGeneratorCommands(ILogger logger)
+        private ILog _logger;
+        public TeamGeneratorCommands(ILog logger)
         {
             _logger = logger;
         }
@@ -23,7 +24,7 @@ namespace Commands
         public async Task GodsCommand(CommandContext ctx)
         {
 
-            _logger.LogInformation("Gods Command executed.");
+            _logger.Info("Gods Command executed.");
             var midChamp = await GetChampion("mid");
             var jungleChamp = await GetChampion("jungle");
             var topChamp = await GetChampion("top");
