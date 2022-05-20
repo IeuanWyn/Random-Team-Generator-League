@@ -1,9 +1,6 @@
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using Commands;
-using log4net;
-using log4net.Config;
-using System.Reflection;
 
 MainAsync().GetAwaiter().GetResult();
 

@@ -9,7 +9,14 @@ namespace Commands
     public class TeamGeneratorCommands : BaseCommandModule
     {
         readonly HttpHelperService _httpHelperService = new HttpHelperService();
-
+        private readonly List<string> _availablePositions = new List<string>()
+        {
+            "top",
+            "jungle",
+            "mid",
+            "adc",
+            "support"
+        };
         public TeamGeneratorCommands()
         {
         }
@@ -27,10 +34,15 @@ namespace Commands
             await ctx.RespondAsync($"Top: {(Champions)int.Parse(topChamp)}, Jungle: {(Champions)int.Parse(jungleChamp)}, Mid: {(Champions)int.Parse(midChamp)}, ADC: {(Champions)int.Parse(adcChamp)}, Support: {(Champions)int.Parse(supportChamp)}");
         }
 
-        [Command("IsGremGay")]
-        public async Task Gay(CommandContext ctx)
+        [Command("gods")]
+        public async Task GodsCommand(CommandContext ctx, string position)
         {
-            await ctx.RespondAsync("Yes");
+            if (!_availablePositions.Contains(position))
+                await ctx.RespondAsync($"Available positons are {_availablePositions}");
+
+            var champion = await GetChampion(position);
+
+            await ctx.RespondAsync($"For {position} you should take {champion}");
         }
 
         private async Task<string> GetChampion(string position)
