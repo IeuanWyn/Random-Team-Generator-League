@@ -1,12 +1,8 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using Enums;
-using log4net;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Services;
-using System.Net.Http.Headers;
-using System.Text;
 
 namespace Commands
 {
@@ -14,17 +10,14 @@ namespace Commands
     {
         readonly HttpHelperService _httpHelperService = new HttpHelperService();
 
-        private ILog _logger;
-        public TeamGeneratorCommands(ILog logger)
+        public TeamGeneratorCommands()
         {
-            _logger = logger;
         }
 
         [Command("gods")]
         public async Task GodsCommand(CommandContext ctx)
         {
 
-            _logger.Info("Gods Command executed.");
             var midChamp = await GetChampion("mid");
             var jungleChamp = await GetChampion("jungle");
             var topChamp = await GetChampion("top");
@@ -34,9 +27,15 @@ namespace Commands
             await ctx.RespondAsync($"Top: {(Champions)int.Parse(topChamp)}, Jungle: {(Champions)int.Parse(jungleChamp)}, Mid: {(Champions)int.Parse(midChamp)}, ADC: {(Champions)int.Parse(adcChamp)}, Support: {(Champions)int.Parse(supportChamp)}");
         }
 
+        [Command("IsGremGay")]
+        public async Task Gay(CommandContext ctx)
+        {
+            await ctx.RespondAsync("Yes");
+        }
+
         private async Task<string> GetChampion(string position)
         {
-            var response = await _httpHelperService.GetJasonFromAPIAsync(_logger, position);
+            var response = await _httpHelperService.GetJasonFromAPIAsync( position);
             return GetRandom(
                     JObject.Parse(
                         await response.Content.ReadAsStringAsync()
