@@ -23,7 +23,7 @@ namespace Commands
         public async Task GodsCommand(CommandContext ctx)
         {
 
-            _logger.LogInformation("Gods Command executed.")
+            _logger.LogInformation("Gods Command executed.");
             var midChamp = await GetChampion("mid");
             var jungleChamp = await GetChampion("jungle");
             var topChamp = await GetChampion("top");
