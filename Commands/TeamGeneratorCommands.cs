@@ -13,12 +13,17 @@ namespace Commands
     {
         readonly HttpHelperService _httpHelperService = new HttpHelperService();
 
+        private ILogger _logger;
+        public TeamGeneratorCommands(ILogger logger)
+        {
+            _logger = logger;
+        }
 
         [Command("gods")]
         public async Task GodsCommand(CommandContext ctx)
         {
 
-
+            _logger.LogInformation("Gods Command executed.")
             var midChamp = await GetChampion("mid");
             var jungleChamp = await GetChampion("jungle");
             var topChamp = await GetChampion("top");
@@ -30,7 +35,7 @@ namespace Commands
 
         private async Task<string> GetChampion(string position)
         {
-            var response = await _httpHelperService.GetJasonFromAPIAsync(position);
+            var response = await _httpHelperService.GetJasonFromAPIAsync(_logger, position);
             return GetRandom(
                     JObject.Parse(
                         await response.Content.ReadAsStringAsync()
