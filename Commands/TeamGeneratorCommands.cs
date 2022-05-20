@@ -37,10 +37,14 @@ namespace Commands
         [Command("gods")]
         public async Task GodsCommand(CommandContext ctx, string position)
         {
-            if (!_availablePositions.Contains(position))
+            var strPos = position;
+            if (position is "bottom" or "bot")
+                strPos = "adc";
+
+            if (!_availablePositions.Contains(strPos))
                 await ctx.RespondAsync($"Available positons are {_availablePositions.ToString()}");
 
-            var champion = await GetChampion(position);
+            var champion = await GetChampion(strPos);
 
             await ctx.RespondAsync($"For {position} you should take {(Champions)int.Parse(champion)}");
         }
