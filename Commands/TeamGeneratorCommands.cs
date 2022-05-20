@@ -42,7 +42,7 @@ namespace Commands
                 strPos = "adc";
 
             if (!_availablePositions.Contains(strPos))
-                await ctx.RespondAsync($"Available positons are {_availablePositions.ToString()}");
+                await ctx.RespondAsync($"Available positons are {string.Join(", ", _availablePositions)}");
 
             var champion = await GetChampion(strPos);
 
