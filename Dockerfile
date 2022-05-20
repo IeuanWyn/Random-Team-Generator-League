@@ -11,6 +11,7 @@ COPY ["Random Team Generator.csproj", "."]
 RUN dotnet restore "./Random Team Generator.csproj"
 COPY . .
 WORKDIR "/src/."
+ENV DISCORD_BOT_ID="SET_TOKEN"
 RUN dotnet build "Random Team Generator.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -13,10 +13,7 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "GOOGLE_APPLICATION_CREDENTIALS": "G:\\Development\\keys\\random-team-generator-league-b141c65bf336.json",
-        "projectId": "random-team-generator-league",
-        "secretId": "Discord_Bot_Token",
-        "secretVersionId": "1"
+        "secretId": "Discord_Bot_Token"
       },
       "applicationUrl": "https://localhost:7231;http://localhost:5231",
       "dotnetRunMessages": true
@@ -32,6 +29,9 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "DISCORD_BOT_ID": "SET_TOKEN"
+      },
       "publishAllPorts": true,
       "useSSL": true
     }
