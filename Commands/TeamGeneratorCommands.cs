@@ -42,7 +42,7 @@ namespace Commands
 
             var champion = await GetChampion(position);
 
-            await ctx.RespondAsync($"For {position} you should take {champion}");
+            await ctx.RespondAsync($"For {position} you should take {(Champions)int.Parse(champion)}");
         }
 
         private async Task<string> GetChampion(string position)
