@@ -38,7 +38,7 @@ namespace Commands
         public async Task GodsCommand(CommandContext ctx, string position)
         {
             if (!_availablePositions.Contains(position))
-                await ctx.RespondAsync($"Available positons are {_availablePositions}");
+                await ctx.RespondAsync($"Available positons are {_availablePositions.ToString()}");
 
             var champion = await GetChampion(position);
 
