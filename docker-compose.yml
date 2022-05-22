@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  randomteamgenerator:
+    image: randomteamgenerator
+    depends_on:
+      - "redis_image"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    links:
+    - "redis_image"
+    
+  redis_image:
+    image: redis
+    container_name: cache
+    ports:
+      - "6379:6379"

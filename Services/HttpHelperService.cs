@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Headers;
+﻿using Managers;
+using System.Net.Http.Headers;
 
 namespace Services
 {
@@ -6,8 +7,12 @@ namespace Services
     {
         static HttpClient client = new HttpClient();
 
-        public async Task<HttpResponseMessage> GetJasonFromAPIAsync(string position)
+        public async Task<string> GetJasonFromAPIAsync(string position)
         {
+            var returnString = CacheManager.Get(position);
+            if (returnString != null)
+                return returnString;
+
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -15,7 +20,9 @@ namespace Services
             {
                 HttpResponseMessage response = await client.GetAsync($"https://www.op.gg/api/statistics/global/champions/ranked?period=month&tier=gold&position={position}");
                 response.EnsureSuccessStatusCode();
-                return response;
+                returnString = await response.Content.ReadAsStringAsync();
+                CacheManager.Set(position, returnString);
+                return returnString;
 
             } catch (Exception ex)
             {

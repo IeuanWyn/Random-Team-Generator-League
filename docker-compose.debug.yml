@@ -1,0 +1,22 @@
+
+version: '3.4'
+
+services:
+  randomteamgenerator:
+    depends_on:
+      - "redis_image"
+    image: randomteamgenerator
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+    links:
+    - "redis_image"
+    
+  redis_image:
+    image: redis
+    container_name: cache
+    ports:
+      - "6379:6379"
+

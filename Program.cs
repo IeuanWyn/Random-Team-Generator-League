@@ -1,13 +1,18 @@
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using Commands;
+using StackExchange.Redis;
+using Managers;
 
 MainAsync().GetAwaiter().GetResult();
 
-
-
 static async Task MainAsync()
 {
+
+    ConnectionMultiplexer redisConnection = ConnectionMultiplexer.Connect(Environment.GetEnvironmentVariable("REDIS_URL"));
+    //Step 2: Get the reference of the redis database using the redis connection.
+    CacheManager.redisCache = redisConnection.GetDatabase();
+
     var discordToken = Environment.GetEnvironmentVariable("DISCORD_BOT_ID");
     if(discordToken == "SET_TOKEN")
     {

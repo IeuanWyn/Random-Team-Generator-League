@@ -51,10 +51,9 @@ namespace Commands
 
         private async Task<string> GetChampion(string position)
         {
-            var response = await _httpHelperService.GetJasonFromAPIAsync( position);
             return GetRandom(
                     JObject.Parse(
-                        await response.Content.ReadAsStringAsync()
+                        await _httpHelperService.GetJasonFromAPIAsync(position)
                         )
                     );
         }
