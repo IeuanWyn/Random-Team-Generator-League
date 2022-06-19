@@ -3,19 +3,20 @@ using DSharpPlus.CommandsNext.Attributes;
 using Enums;
 using Newtonsoft.Json.Linq;
 using Services;
+using System.Linq;
 
 namespace Commands
 {
     public class TeamGeneratorCommands : BaseCommandModule
     {
         readonly HttpHelperService _httpHelperService = new HttpHelperService();
-        private readonly List<string> _availablePositions = new List<string>()
+        private readonly Dictionary<string, int> _availablePositions = new Dictionary<string, int>()
         {
-            "top",
-            "jungle",
-            "mid",
-            "adc",
-            "support"
+            {"top",57},
+            {"jungle", 46},
+            {"mid", 57},
+            { "adc", 28},
+            {"support",30}
         };
         public TeamGeneratorCommands()
         {
@@ -41,8 +42,8 @@ namespace Commands
             if (position is "bottom" or "bot")
                 strPos = "adc";
 
-            if (!_availablePositions.Contains(strPos))
-                await ctx.RespondAsync($"Available positons are {string.Join(", ", _availablePositions)}");
+            if (!_availablePositions.ContainsKey(strPos))
+                await ctx.RespondAsync($"Available positons are {string.Join(", ", _availablePositions.Keys.ToList())}");
 
             var champion = await GetChampion(strPos);
 
@@ -51,19 +52,22 @@ namespace Commands
 
         private async Task<string> GetChampion(string position)
         {
+            _availablePositions.TryGetValue(position, out int count);
             return GetRandom(
                     JObject.Parse(
                         await _httpHelperService.GetJasonFromAPIAsync(position)
                         )
+                    , count
                     );
         }
-        private string GetRandom(JObject jasonObject)
+        private string GetRandom(JObject jasonObject, int count)
         {
             IEnumerable<string>? characterIds =
                 from p in jasonObject["data"]
                 select (string)p["champion_id"];
 
-            return characterIds.Skip(new Random().Next(0, 40)).FirstOrDefault();
+            return characterIds.Skip(new Random().Next(0, count))
+                .FirstOrDefault();
         }
     }
 }
